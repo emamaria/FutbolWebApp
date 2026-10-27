@@ -1,0 +1,16 @@
+
+
+programs/*.dbg
+programs/*.exe
+programs/*.exe.manifest
+
+appsrc/*.fld
+appsrc/*.pbg
+appsrc/*.pkd
+appsrc/*.prp
+appsrc/*.err
+appsrc/*.prn
+
+idesrc/workspace.loc
+
+**/*.log
