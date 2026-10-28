@@ -29,38 +29,48 @@ Object oZoomLiga is a cWebView
     Object oWebMainPanel is a cWebPanel
         Set piColumnCount to 12
         WebSetResponsive piColumnCount rmMobile to 4
+        
+        Object oNombrePaisGroup is a cWebGroup
 
-        Object oligaNombre is a cWebForm
-            Entry_Item liga.Nombre
-            Set piColumnSpan to 12
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Nombre"
-        End_Object 
+            Object oligaNombre is a cWebForm
+                Entry_Item liga.Nombre
+                Set piColumnSpan to 12
+                Set piColumnIndex to 0
+                Set peLabelPosition to lpTop
+                Set psLabel to "Nombre"
+            End_Object 
+    
+            Object oligaPais is a cWebForm
+                Entry_Item liga.Pais
+                Set piColumnSpan to 10
+                Set piColumnIndex to 0
+                Set peLabelPosition to lpTop
+                Set psLabel to "Pais"
+            End_Object 
+        End_Object
+        
+        Object oDatosEquipoGroup is a cWebGroup
+            Set piColumnCount to 6
+            Set piColumnSpan to 6
+       
 
-        Object oligaPais is a cWebForm
-            Entry_Item liga.Pais
-            Set piColumnSpan to 10
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Pais"
-        End_Object 
-
-        Object oligaEquipos is a cWebForm
-            Entry_Item liga.Equipos
-            Set piColumnSpan to 2
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Equipos"
-        End_Object 
-
-        Object oligaEquiposMax is a cWebForm
-            Entry_Item liga.EquiposMax
-            Set piColumnSpan to 2
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "EquiposMax"
-        End_Object 
+            Object oligaEquipos is a cWebForm
+                Entry_Item liga.Equipos
+                Set piColumnSpan to 3
+                Set piColumnIndex to 0 
+                Set peLabelPosition to lpTop
+                Set psLabel to "Equipos"
+            End_Object 
+    
+            Object oligaEquiposMax is a cWebForm
+                Entry_Item liga.EquiposMax
+                Set piColumnSpan to 3
+                Set piColumnIndex to 3
+                Set peLabelPosition to lpTop
+                Set psLabel to "EquiposMax"
+            End_Object 
+        
+        End_Object
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup

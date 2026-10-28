@@ -39,26 +39,35 @@ Object oZoomEntrenador is a cWebView
     Object oWebMainPanel is a cWebPanel
         Set piColumnCount to 12
         WebSetResponsive piColumnCount rmMobile to 4
+        
+      Object oNombreCompletoGroup is a cWebGroup
+            Set piColumnCount to 12
+        
+            Object oentrenadorNombre is a cWebForm
+                Entry_Item entrenador.Nombre
+                Set piColumnSpan to 6
+                Set piColumnIndex to 0
+                Set peLabelPosition to lpTop
+                Set psLabel to "Nombre"
+            End_Object 
 
-        Object oentrenadorNombre is a cWebForm
-            Entry_Item entrenador.Nombre
-            Set piColumnSpan to 12
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Nombre"
-        End_Object 
-
-        Object oentrenadorApellido is a cWebForm
-            Entry_Item entrenador.Apellido
-            Set piColumnSpan to 12
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Apellido"
-        End_Object 
+            Object oentrenadorApellido is a cWebForm
+                Entry_Item entrenador.Apellido
+                Set piColumnSpan to 6
+                Set piColumnIndex to 6
+                Set peLabelPosition to lpTop
+                Set psLabel to "Apellido" 
+            End_Object 
+        
+      End_Object
+      
+      Object oNacionalidadEquipoGroup is a cWebGroup
+        Set piColumnCount to 8
+        Set piColumnSpan to 8
 
         Object oentrenadorNacionalidad is a cWebForm
             Entry_Item entrenador.Nacionalidad
-            Set piColumnSpan to 10
+            Set piColumnSpan to 4
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Nacionalidad"
@@ -66,10 +75,10 @@ Object oZoomEntrenador is a cWebView
 
         Object oequipoNombre is a cWebForm
             Entry_Item equipo.Nombre
-            Set piColumnSpan to 12
-            Set piColumnIndex to 0
+            Set piColumnSpan to 4
+            Set piColumnIndex to 4
             Set peLabelPosition to lpTop
-            Set psLabel to "Nombre"
+            Set psLabel to "Equipo"
             Set pbPromptButton to True
 
 // ToDo: Fill in the from-child parent Select view object name for navigate forward
@@ -79,6 +88,7 @@ Object oZoomEntrenador is a cWebView
                 Send NavigatePath
             End_Procedure
         End_Object 
+       End_Object 
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup

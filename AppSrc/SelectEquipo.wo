@@ -37,12 +37,12 @@ Object oSelectEquipo is a cWebView
         Set psCSSClass to "MobileList"
         Set pbServerOnRowClick to True
         Set pbFillHeight to True
-        Set pbShowHeader to False
+        Set pbShowHeader to True
         Set piSortColumn to 0
 
         Object oequipoNombre is a cWebColumn
             Entry_Item equipo.Nombre
-            Set psCaption to "equipo.Nombre"
+            Set psCaption to "Nombre"
             Set piWidth to 1491
         End_Object 
 
@@ -52,7 +52,7 @@ Object oSelectEquipo is a cWebView
             Set pbFixedWidth to True
             Set pbResizable to False
             Set piListRowSpan to 1
-            Set psBtnCssClass to "WebButtonIcon WebIcon_Info"
+            Set psBtnCssClass to "WebButtonIcon WebIcon"
             Set peAlign to alignRight
 
             WebRegisterPath ntNavigateForward oZoomEquipo
