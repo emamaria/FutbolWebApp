@@ -9,7 +9,7 @@ Object oApplication is a cApplication
 End_Object
 
 Object oWebApp is a cWebApp
-    Set psTheme to "Df_Material"
+    Set psTheme to "Gold_League"
     Set peAlignView to alignCenter
     
     // It is important to set this so that all views will default
@@ -54,7 +54,7 @@ Object oWebApp is a cWebApp
                     Set psCaption to C_$View
 
                     Object oSelectEntrenadorItem1 is a cWebMenuItem
-                        Set psCaption to "SelectEntrenador"
+                        Set psCaption to "Entrenador"
 
                         WebRegisterPath ntNavigateBegin oSelectEntrenador
 
@@ -65,7 +65,7 @@ Object oWebApp is a cWebApp
                     End_Object
 
                     Object oSelectJugadorItem1 is a cWebMenuItem
-                        Set psCaption to "SelectJugador"
+                        Set psCaption to "Jugador"
 
                         WebRegisterPath ntNavigateBegin oSelectJugador
 
@@ -76,7 +76,7 @@ Object oWebApp is a cWebApp
                     End_Object
 
                     Object oSelectPosicionItem1 is a cWebMenuItem
-                        Set psCaption to "SelectPosicion"
+                        Set psCaption to "Posicion"
 
                         WebRegisterPath ntNavigateBegin oSelectPosicion
 
@@ -87,7 +87,7 @@ Object oWebApp is a cWebApp
                     End_Object
 
                     Object oSelectEquipoItem1 is a cWebMenuItem
-                        Set psCaption to "SelectEquipo"
+                        Set psCaption to "Equipo"
 
                         WebRegisterPath ntNavigateBegin oSelectEquipo
 
@@ -98,7 +98,7 @@ Object oWebApp is a cWebApp
                     End_Object
 
                     Object oSelectLigaItem1 is a cWebMenuItem
-                        Set psCaption to "SelectLiga"
+                        Set psCaption to "Liga"
 
                         WebRegisterPath ntNavigateBegin oSelectLiga
 

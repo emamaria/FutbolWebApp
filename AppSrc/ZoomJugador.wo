@@ -62,8 +62,8 @@ Object oZoomJugador is a cWebView
          End_Object
          
         Object oNacionalidadEquipoGroup is a cWebGroup
-              Set piColumnCount to 8
-              Set piColumnSpan to  8
+            Set piColumnCount to 8
+            Set piColumnSpan to  8
     
             Object ojugadorNacionalidad is a cWebForm
                 Entry_Item jugador.Nacionalidad
