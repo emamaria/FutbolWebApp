@@ -62,32 +62,32 @@ Object oZoomEntrenador is a cWebView
       End_Object
       
       Object oNacionalidadEquipoGroup is a cWebGroup
-        Set piColumnCount to 8
-        Set piColumnSpan to 8
+            Set piColumnCount to 8
+            Set piColumnSpan to 8
 
-        Object oentrenadorNacionalidad is a cWebForm
-            Entry_Item entrenador.Nacionalidad
-            Set piColumnSpan to 4
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Nacionalidad"
-        End_Object 
+            Object oentrenadorNacionalidad is a cWebForm
+                Entry_Item entrenador.Nacionalidad
+                Set piColumnSpan to 4
+                Set piColumnIndex to 0
+                Set peLabelPosition to lpTop
+                Set psLabel to "Nacionalidad"
+            End_Object 
 
-        Object oequipoNombre is a cWebForm
-            Entry_Item equipo.Nombre
-            Set piColumnSpan to 4
-            Set piColumnIndex to 4
-            Set peLabelPosition to lpTop
-            Set psLabel to "Equipo"
-            Set pbPromptButton to True
+            Object oequipoNombre is a cWebForm
+                Entry_Item equipo.Nombre
+                Set piColumnSpan to 4
+                Set piColumnIndex to 4
+                Set peLabelPosition to lpTop
+                Set psLabel to "Equipo"
+                Set pbPromptButton to True
 
 // ToDo: Fill in the from-child parent Select view object name for navigate forward
 //            WebRegisterPath ntNavigateForward oSelectView
 
-            Procedure OnPrompt
-                Send NavigatePath
-            End_Procedure
-        End_Object 
+                Procedure OnPrompt
+                    Send NavigatePath
+                End_Procedure
+            End_Object 
        End_Object 
     End_Object 
 
