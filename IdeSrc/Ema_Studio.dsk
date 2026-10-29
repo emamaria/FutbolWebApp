@@ -1,7 +1,7 @@
 [Workspace]
 CurrentProject=WebApp.src
 Location=C:\DataFlex Projects\FutbolWebApp\IdeSrc\Ema_Studio.dsk
-CreateNew=-1
+CreateNew=3
 [TabWindows]
 GroupCount=1
 HorizontalGroups=1
@@ -18,6 +18,72 @@ Right=1225
 TabIndex=0
 TabGroup=0
 [Window1]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\Dashboard.wo
+ViewType=1
+Top=26
+Left=0
+Bottom=758
+Right=1225
+CursorLine=60
+CursorColumn=79
+TabIndex=2
+TabGroup=0
+[Window2]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomPosicion.wo
+ViewType=1
+Top=26
+Left=0
+Bottom=758
+Right=1225
+CursorLine=26
+CursorColumn=0
+TabIndex=7
+TabGroup=0
+[Window3]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomLiga.wo
+ViewType=1
+Top=26
+Left=0
+Bottom=758
+Right=1225
+CursorLine=69
+CursorColumn=43
+TabIndex=6
+TabGroup=0
+[Window4]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomEntrenador.wo
+ViewType=1
+Top=26
+Left=0
+Bottom=758
+Right=1225
+CursorLine=9
+CursorColumn=0
+TabIndex=3
+TabGroup=0
+[Window5]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomEquipo.wo
+ViewType=1
+Top=26
+Left=0
+Bottom=758
+Right=1225
+CursorLine=63
+CursorColumn=15
+TabIndex=4
+TabGroup=0
+[Window6]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomJugador.wo
+ViewType=1
+Top=26
+Left=0
+Bottom=758
+Right=1225
+CursorLine=84
+CursorColumn=12
+TabIndex=5
+TabGroup=0
+[Window7]
 Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\WebApp.src
 ViewType=1
 Top=26
@@ -25,6 +91,6 @@ Left=0
 Bottom=758
 Right=1225
 CursorLine=11
-CursorColumn=34
+CursorColumn=32
 TabIndex=1
 TabGroup=0
