@@ -82,7 +82,7 @@ Object oZoomEntrenador is a cWebView
                 Set pbPromptButton to True
 
 // ToDo: Fill in the from-child parent Select view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oSelectView
+           WebRegisterPath ntNavigateForward oSelectEquipo
 
                 Procedure OnPrompt
                     Send NavigatePath
@@ -187,7 +187,17 @@ Object oZoomEntrenador is a cWebView
             Case Else // must be nfUndefined
 
         Case End
-
+        
+        If (HasRecord(Server(Self))) Begin
+            Send SetHeaderCaption ("Entrenador :"* entrenador.Nombre)
+            Send SetBreadcrumbCaption (entrenador.Nombre*entrenador.Apellido)
+        End
+        
+        Else Begin
+            Send SetHeaderCaption "Nuevo Entrenador"
+            Send SetBreadcrumbCaption "Nuevo"
+        End
+        
         Send SetActionButtons
 
     End_Procedure
