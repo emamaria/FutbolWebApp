@@ -72,7 +72,7 @@ Object oSelectPosicion is a cWebView
 
             Case Begin
                 Case (NavigateData.eNavigateType = nfFromParent)
-                    Send NavigateForward of oZoomPosicion Self
+                   
                     Case Break
 
                 Case (NavigateData.eNavigateType = nfFromChild)
@@ -147,9 +147,12 @@ Object oSelectPosicion is a cWebView
             Case Else // must be nfUndefined
                 // This may be the start of a drilldown query or this may be used for some kind of custom query.
                 // If Row select does main-zoom we don't need this
-                WebSet pbRender of oDetailButton to False
+              
 
         Case End
+        
+        Send SetHeaderCaption ("Posiciones")
+        Send SetBreadcrumbCaption ("Posiciones")
 
     End_Procedure
 

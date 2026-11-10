@@ -52,7 +52,7 @@ Object oSelectEquipo is a cWebView
             Set pbFixedWidth to True
             Set pbResizable to False
             Set piListRowSpan to 1
-            Set psBtnCssClass to "WebButtonIcon WebIcon"
+            Set psBtnCssClass to "WebButtonIcon WebIcon_Info"
             Set peAlign to alignRight
 
             WebRegisterPath ntNavigateForward oZoomEquipo
@@ -75,7 +75,7 @@ Object oSelectEquipo is a cWebView
 
             Case Begin
                 Case (NavigateData.eNavigateType = nfFromParent)
-                    Send NavigateForward of oZoomEquipo Self
+                  
                     Case Break
 
                 Case (NavigateData.eNavigateType = nfFromChild)
@@ -150,9 +150,12 @@ Object oSelectEquipo is a cWebView
             Case Else // must be nfUndefined
                 // This may be the start of a drilldown query or this may be used for some kind of custom query.
                 // If Row select does main-zoom we don't need this
-                WebSet pbRender of oDetailButton to False
+               
 
         Case End
+        
+        Send SetHeaderCaption ("Equipos")
+        Send SetBreadcrumbCaption ("Equipos")
 
     End_Procedure
 
