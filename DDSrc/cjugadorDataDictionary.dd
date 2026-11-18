@@ -13,6 +13,10 @@ Class cjugadorDataDictionary is a DataDictionary
          // proteger pk
         Set Protect_Key_State to True
         Set Key_Field_State Field jugador.ID to True
+        
+        // campos de solo lectura
+        Set Field_Option Field jugador.Nombre DD_DISPLAYONLY to True
+        Set Field_Option Field jugador.Apellido DD_DISPLAYONLY to True
 
         Set Add_Server_File to equipo.File_Number
 

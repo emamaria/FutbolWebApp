@@ -12,6 +12,9 @@ Class cligaDataDictionary is a DataDictionary
         // proteger pk
         Set Protect_Key_State to True
         Set Key_Field_State Field liga.ID to True
+        
+        // permite entrar interactuar con el campo pero no guarda cambio
+        Set Field_Option Field liga.Nombre DD_NoPut to True
 
         Set Add_Client_File to equipo.File_Number
 
