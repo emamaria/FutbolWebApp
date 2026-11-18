@@ -14,6 +14,10 @@ Class cequipoDataDictionary is a DataDictionary
          // proteger pk
         Set Protect_Key_State to True
         Set Key_Field_State Field equipo.ID to True
+        
+        // permite entrar interactuar con el campo pero no guarda cambio
+        Set Field_Option Field equipo.Nombre DD_NoPut to True
+
 
         Set Add_Server_File to liga.File_Number
 

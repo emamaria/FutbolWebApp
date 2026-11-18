@@ -12,6 +12,10 @@ Class cposicionDataDictionary is a DataDictionary
          // proteger pk
         Set Protect_Key_State to True
         Set Key_Field_State Field posicion.ID to True
+        
+        // solo lectura
+        Set Field_Option Field posicion.Nombre DD_DisplayOnly to True
+
 
         Set Add_Client_File to jugadorposicion.File_Number
 
