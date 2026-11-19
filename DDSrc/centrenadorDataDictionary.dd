@@ -13,6 +13,10 @@ Class centrenadorDataDictionary is a DataDictionary
         Set Protect_Key_State to True
         Set Key_Field_State Field entrenador.ID to True
         
+        //campos obligatorios
+        Set Field_Option Field entrenador.Nombre DD_Required to True
+        Set Field_Option Field entrenador.Apellido DD_Required to True
+        
         // Campos de solo lectura
         Set Field_Option Field entrenador.Nombre DD_DISPLAYONLY to True
         Set Field_Option Field entrenador.Apellido DD_DISPLAYONLY to True

@@ -7,7 +7,7 @@ GroupCount=1
 HorizontalGroups=1
 [TabGroup0]
 GroupSize=40
-SelectedTab=6
+SelectedTab=7
 [Window0]
 Filename=Workspace Dashboard
 ViewType=101
@@ -82,4 +82,15 @@ Right=1455
 CursorLine=78
 CursorColumn=20
 TabIndex=6
+TabGroup=0
+[Window7]
+Filename=C:\DataFlex Projects\FutbolWebApp\DDSrc\cposicionDataDictionary.dd
+ViewType=1
+Top=26
+Left=0
+Bottom=453
+Right=1455
+CursorLine=15
+CursorColumn=27
+TabIndex=7
 TabGroup=0
