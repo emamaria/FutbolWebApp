@@ -14,6 +14,10 @@ Class cjugadorDataDictionary is a DataDictionary
         Set Protect_Key_State to True
         Set Key_Field_State Field jugador.ID to True
         
+        //campos obligatorios
+        Set Field_Option Field jugador.Nombre DD_Required to True
+        Set Field_Option Field jugador.Apellido DD_Required to True
+        
         // campos de solo lectura
         Set Field_Option Field jugador.Nombre DD_DISPLAYONLY to True
         Set Field_Option Field jugador.Apellido DD_DISPLAYONLY to True
