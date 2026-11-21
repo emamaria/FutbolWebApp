@@ -3,12 +3,18 @@
 Open entrenador
 Open equipo
 
+//objeto que contiene los valores de esta categoría
+
+Object oNationalityTable is a CodeValidationTable
+    Set Type_Value to "NACION"
+End_Object
+
 Class centrenadorDataDictionary is a DataDictionary
     
     Procedure Construct_Object
         Forward Send Construct_Object
         Set Main_File to entrenador.File_Number
-        
+              
          // proteger pk
         Set Protect_Key_State to True
         Set Key_Field_State Field entrenador.ID to True
@@ -20,6 +26,10 @@ Class centrenadorDataDictionary is a DataDictionary
         // Campos de solo lectura
         Set Field_Option Field entrenador.Nombre DD_DISPLAYONLY to True
         Set Field_Option Field entrenador.Apellido DD_DISPLAYONLY to True
+        
+        //el campo entrenador.nacionalidad debe validarse con objeto oNationalityTable
+        
+        Set Field_Value_Table Field entrenador.Nacionalidad to oNationalityTable
 
         Set Add_Server_File to equipo.File_Number
 
