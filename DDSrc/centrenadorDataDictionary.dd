@@ -14,6 +14,14 @@ Class centrenadorDataDictionary is a DataDictionary
     Procedure Construct_Object
         Forward Send Construct_Object
         Set Main_File to entrenador.File_Number
+        
+        //bandera evento boton 
+    
+        Property Boolean pbDespedirEntrenador False
+        
+         // Permitir que el entrenador no tenga equipo
+        Set ParentNullAllowed equipo.File_Number to True
+
               
          // proteger pk
         Set Protect_Key_State to True
@@ -38,6 +46,29 @@ Class centrenadorDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_INDEXFIELD DD_NOPUT to True
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
 
+    End_Procedure
+
+    
+    // poner campo equipoid a null si se pulso boton
+    
+    Procedure Save_Main_File
+        Integer iField
+        Boolean bDespedir
+        // obtener valor bandera
+        Get pbDespedirEntrenador to bDespedir
+    
+        If (bDespedir) Begin
+            // obtener el número de campo EquipoID
+            Get_FieldNumber entrenador.EquipoID to iField
+            // indicar a DataFlex que debe guardar EquipoID como null
+            Set_Attribute DF_FIELD_IS_NULL of entrenador.File_Number iField to True
+          
+        End
+    
+        // continuar con el guardado normal 
+        Forward Send Save_Main_File
+        
+        
     End_Procedure
 
 End_Class

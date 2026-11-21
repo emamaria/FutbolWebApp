@@ -90,7 +90,39 @@ Object oZoomEntrenador is a cWebView
                 End_Procedure
             End_Object 
       End_Object 
-      
+       // boton despedir
+      Object oDespedirEntrenadorBtn is a cWebButton
+           Set psCaption to "Despedir"
+           Set piColumnSpan to 3
+           Set piColumnIndex to 0
+        
+           Procedure OnClick
+                Boolean bError
+               
+                //bandera
+                Set pbDespedirEntrenador of oentrenador_DD to True
+
+                // Ejecutar el guardado
+                Send Request_Save of oentrenador_DD
+
+                // Comprobar el resultado
+                Move (Err) to bError
+                
+                
+                // Restablecer nuestra bandera
+                Set pbDespedirEntrenador of oentrenador_DD to False
+
+                If (bError) Begin
+                    Send ShowInfoBox "Error al despedir al entrenador"
+                End
+                
+                If (not(bError)) Begin
+                    Send RefreshRecord
+                End
+               
+           End_Procedure
+      End_Object
+        
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
