@@ -70,6 +70,7 @@ Object oZoomEquipo is a cWebView
             Set psCaption to "Save"
 
             Procedure OnClick
+
                 Send Request_Save
             End_Procedure
 
