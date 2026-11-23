@@ -6,7 +6,7 @@ Open equipo
 //objeto que contiene los valores de esta categoría
 
 Object oNationalityTable is a CodeValidationTable
-    Set Type_Value to "NACION"
+   Set Type_Value to "NACION"
 End_Object
 
 Class centrenadorDataDictionary is a DataDictionary
