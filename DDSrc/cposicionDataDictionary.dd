@@ -8,6 +8,17 @@ Class cposicionDataDictionary is a DataDictionary
     Procedure Construct_Object
         Forward Send Construct_Object
         Set Main_File to posicion.File_Number
+        
+         // proteger pk
+        Set Protect_Key_State to True
+        Set Key_Field_State Field posicion.ID to True
+        
+        //campo obligatorio
+        Set Field_Option Field posicion.Nombre DD_Required to True
+        
+        // solo lectura
+        Set Field_Option Field posicion.Nombre DD_DisplayOnly to True
+
 
         Set Add_Client_File to jugadorposicion.File_Number
 

@@ -65,7 +65,8 @@ Object oZoomEntrenador is a cWebView
             Set piColumnCount to 8
             Set piColumnSpan to 8
 
-            Object oentrenadorNacionalidad is a cWebForm
+            //webcombo
+            Object oentrenadorNacionalidad is a cWebCombo
                 Entry_Item entrenador.Nacionalidad
                 Set piColumnSpan to 4
                 Set piColumnIndex to 0
@@ -88,7 +89,18 @@ Object oZoomEntrenador is a cWebView
                     Send NavigatePath
                 End_Procedure
             End_Object 
-       End_Object 
+      End_Object 
+       // boton despedir
+      Object oDespedirEntrenadorBtn is a cWebButton
+           Set psCaption to "Despedir"
+           Set piColumnSpan to 3
+           Set piColumnIndex to 0
+        
+           Procedure OnClick   
+            Send Clear of oequipo_DD               
+           End_Procedure
+      End_Object
+        
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
@@ -148,7 +160,9 @@ Object oZoomEntrenador is a cWebView
         WebSet pbRender of oEditBtn to False
         WebSet pbRender of oSaveBtn to False
         WebSet pbRender of oCancelChangesBtn to False
-        WebSet pbRender of oDeleteBtn to False
+        WebSet pbRender of oDeleteBtn to False 
+        //no renderizo boton al entrar
+        WebSet pbRender of oDespedirEntrenadorBtn to False
 
         If (NavigateData.bReadOnly) Begin
             WebSet pbRender of oEditBtn to True
@@ -157,6 +171,8 @@ Object oZoomEntrenador is a cWebView
             WebSet pbRender of oSaveBtn to True
             WebSet pbRender of oCancelChangesBtn to True
             WebSet pbRender of oDeleteBtn to bHasRecord
+            //renderizo boton en editar
+            WebSet pbRender of oDespedirEntrenadorBtn to True
         End
     End_Procedure
 

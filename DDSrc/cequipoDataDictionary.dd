@@ -10,6 +10,19 @@ Class cequipoDataDictionary is a DataDictionary
     Procedure Construct_Object
         Forward Send Construct_Object
         Set Main_File to equipo.File_Number
+        
+      
+         // proteger pk
+        Set Protect_Key_State to True
+        Set Key_Field_State Field equipo.ID to True
+        
+        //campos obligatorios
+        Set Field_Option Field equipo.Nombre DD_Required to True
+        Set Field_Option Field equipo.LigaID DD_Required to True
+        
+        // permite entrar interactuar con el campo pero no guarda cambio
+        Set Field_Option Field equipo.Nombre DD_NoPut to True
+
 
         Set Add_Server_File to liga.File_Number
 
@@ -22,5 +35,49 @@ Class cequipoDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
 
     End_Procedure
+    
+  
+
+      //restar un equipo de la liga anterior
+      
+        Procedure Backout
+            
+            Forward Send Backout
+                
+            Move (liga.Equipos - 1) to liga.Equipos
+               
+        End_Procedure
+
+        //sumar un equipo a la liga nueva
+        
+        Procedure Update
+        
+           Forward Send Update
+        
+           Move (liga.Equipos + 1) to liga.Equipos
+           
+
+        End_Procedure
+
+        
+        
+        Function Validate_Save Returns Integer
+            
+           Integer iError
+ 
+            //comprobar si no supera el límite de equipos
+            If (liga.Equipos > liga.EquiposMax) Begin
+                Send UserError "Número máximo de equipos alcanzado en esta liga."
+                Move 1 to iError
+            End
+         
+            If (iError = 0) Begin
+                //ejecuto validación original
+                Forward Get Validate_Save to iError
+            End
+         
+            Function_Return iError
+
+        End_Function
 
 End_Class
