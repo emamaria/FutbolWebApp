@@ -40,17 +40,6 @@ CursorColumn=16
 TabIndex=2
 TabGroup=0
 [Window3]
-Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomEquipo.wo
-ViewType=1
-Top=26
-Left=0
-Bottom=453
-Right=1400
-CursorLine=138
-CursorColumn=17
-TabIndex=5
-TabGroup=0
-[Window4]
 Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\SelectEquipo.wo
 ViewType=1
 Top=26
@@ -61,7 +50,7 @@ CursorLine=78
 CursorColumn=30
 TabIndex=3
 TabGroup=0
-[Window5]
+[Window4]
 Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomJugador.wo
 ViewType=1
 Top=26
@@ -71,6 +60,17 @@ Right=1400
 CursorLine=73
 CursorColumn=23
 TabIndex=4
+TabGroup=0
+[Window5]
+Filename=C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomEquipo.wo
+ViewType=1
+Top=26
+Left=0
+Bottom=453
+Right=1400
+CursorLine=138
+CursorColumn=17
+TabIndex=5
 TabGroup=0
 [Window6]
 Filename=C:\DataFlex Projects\FutbolWebApp\DDSrc\cequipoDataDictionary.dd
